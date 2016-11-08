@@ -11,7 +11,7 @@ Date:08/11/2016
 void setup()
 {
   size(800,800);
-  table=loadTable("stars.csv","header");
+  table=loadTable("stars.csv","header");// loads table
   count=table.getRowCount();
   loadData();
   printStar();
@@ -23,11 +23,11 @@ void draw()
 {
   background(0);
   stroke(255);
-  for(i=50;i<width;i +=70)
+  for(i=50;i<width;i +=70)//draws grid
   {
     line(50,i,750,i);
   }
-  for(i=50;i<width;i +=70)
+  for(i=50;i<width;i +=70)//draws grid
   {
     line(i,50,i,750);
   }
@@ -35,7 +35,7 @@ void draw()
   
 }
 
-void loadData()
+void loadData()//loads data from arrayList
 {
       for(TableRow row :table.rows())
   {
@@ -54,7 +54,7 @@ void loadData()
 
   }
 }
-void printStar()
+void printStar()//prints data to console
 {
   for (Star part : star) 
   {
@@ -62,7 +62,7 @@ void printStar()
   }
 }
 
-void plotStar()
+void plotStar()//plots star
 {    
   
   for (Star part : star) 
