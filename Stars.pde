@@ -6,7 +6,7 @@ class Star
   float x;
   float y;
   float z;
-  float size;
+  float sizeM;
   Star(String hab,String displayName,float distance,float xg,float yg,float zg,float absMag)
   {
     habit=hab;
@@ -15,13 +15,13 @@ class Star
     x=xg;
     y=yg;
     z=zg;
-    size=absMag;
+    sizeM=absMag;
   }
   
   
   void display()
   {
-    println(habit+","+name+","+dist+","+x+","+y+","+z+","+size);
+    println(habit+","+name+","+dist+","+x+","+y+","+z+","+sizeM);
     
   }
 }
