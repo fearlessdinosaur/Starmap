@@ -32,6 +32,7 @@ void draw()
     line(i,50,i,750);
   }
   plotStar();
+  
 }
 
 void loadData()
@@ -73,7 +74,8 @@ void plotStar()
     line(x,y-4,x,y+4);
     stroke(255,0,0);
     ellipse(x,y,part.sizeM,part.sizeM);
-    text(part.name,x+(part.sizeM/2),y-10+j);
+    textAlign(LEFT,CENTER);
+    text(part.name,x+(part.sizeM/2),y-10);
     
   }
 }
