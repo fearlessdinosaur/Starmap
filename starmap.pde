@@ -5,7 +5,8 @@ Date:08/11/2016
 */
  Table table;
  ArrayList<Star> star = new ArrayList<Star>();
- int i;
+ float i;
+ float j;
  int count;
 void setup()
 {
@@ -22,13 +23,13 @@ void draw()
 {
   background(0);
   stroke(255);
-  for(i=100;i<width;i +=50)
+  for(i=50;i<width;i +=70)
   {
     line(50,i,750,i);
   }
-  for(i=50;i<width;i +=50)
+  for(i=50;i<width;i +=70)
   {
-    line(i,100,i,750);
+    line(i,50,i,750);
   }
   plotStar();
 }
@@ -66,11 +67,13 @@ void plotStar()
   for (Star part : star) 
   {
     stroke(255,255,0);
-    float x= map(part.x,-7,7,0,800);
-    float y= map(part.y,-7,7,0,800);
+    float x= map(part.x,-5,5,0,800);
+    float y= map(part.y,-5,5,0,800);
     line(x-4,y,x+4,y);
     line(x,y-4,x,y+4);
     stroke(255,0,0);
     ellipse(x,y,part.sizeM,part.sizeM);
+    text(part.name,x+(part.sizeM/2),y-10+j);
+    
   }
 }
